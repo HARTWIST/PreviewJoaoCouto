@@ -1,0 +1,86 @@
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+.target{
+  animation: shake 200ms;
+}
+
+div{
+  font-family: roboto;
+  font-size: 35px;
+}
+h4{
+  font-family: roboto;
+  font-size: 20px;
+  color: #049bfa;
+}
+
+button{
+  background-color: Transparent;
+  border: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  text-align: center;
+  background-color: #F0F3F4;
+  padding-top:50px;
+  padding-bottom:30px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+li {
+    display: inline-block;
+    width: 30%;
+    height: 15%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+@media only screen and (min-width: 1000px) {
+  button{
+    background-color: Transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  img{
+    width: 75%;
+    height: 75%;
+  }
+  li {
+    display: inline-block;
+    width: 8%;
+    height: 16s%;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  div{
+    font-family: roboto;
+    font-size: 46px;
+  }
+  h4{
+    font-family: roboto;
+    font-size: 27px;
+    color: #049bfa;
+  }
+}

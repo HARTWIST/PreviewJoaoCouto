@@ -1,0 +1,113 @@
+<htmL>
+	<head>
+		<title>Ligo-te mais logo</title>
+		<link rel="icon" type="image/x-icon" href="img/ligar.ico">
+  		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="estilo.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body>
+		<audio id="certo">
+  			<source src="audio/TeaserPEM.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="1">
+  			<source src="audio/1.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="2">
+  			<source src="audio/2.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="3">
+  			<source src="audio/3.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="4">
+  			<source src="audio/4.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="5">
+  			<source src="audio/5.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="6">
+  			<source src="audio/6.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="7">
+  			<source src="audio/7.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="8">
+  			<source src="audio/8.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="9">
+  			<source src="audio/9.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="0">
+  			<source src="audio/0.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="*">
+  			<source src="audio/aste.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="#">
+  			<source src="audio/#.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="errado">
+  			<source src="audio/errado.mp3" type="audio/mpeg">
+		</audio>
+
+		
+		<script type="text/javascript">
+			let msg ="";
+			function valorString(n) {
+  				msg += n;
+  				document.getElementById("myText").innerHTML = msg;
+  				//var mus = document.getElementById(n);//
+				//mus.play();//
+			}
+			function playAudio() {
+				if (msg == "10062022"){
+					var mus = document.getElementById("certo");
+					mus.play();
+				}else{
+					document.getElementById("myText").classList.add("target");
+					var mus = document.getElementById("errado");
+					mus.play();
+				}
+			}
+			function valorDel(){
+				msg=msg.slice(0, -1);
+				document.getElementById("myText").innerHTML = msg;
+				if (msg == ""){
+					document.getElementById("myText").innerHTML = "...";
+				}
+			}	
+		</script>
+
+
+		<div class="" id="myText">...</div>
+		<h4>Quando é que te posso ligar ?</h4>
+			<ul>
+				<li><button id="btn1" onclick="valorString('1')"><img src="img/1.png" alt="1"></button></li>
+				<li><button id="btn2" onclick="valorString('2')"><img src="img/2.png" alt="2"></button></li>
+				<li><button id="btn3" onclick="valorString('3')"><img src="img/3.png" alt="3"></button></li>
+			</ul>
+			<ul>
+				<li><button id="btn4" onclick="valorString('4')"><img src="img/4.png" alt="4"></button></li>
+				<li><button id="btn5" onclick="valorString('5')"><img src="img/5.png" alt="5"></button></li>
+				<li><button id="btn6" onclick="valorString('6')"><img src="img/6.png" alt="6"></button></li>
+			</ul>
+			<ul>
+				<li><button id="btn7" onclick="valorString('7')"><img src="img/7.png" alt="7"></button></li>
+				<li><button id="btn8" onclick="valorString('8')"><img src="img/8.png" alt="8"></button></li>
+				<li><button id="btn9" onclick="valorString('9')"><img src="img/9.png" alt="9"></button></li>
+			</ul>
+			<ul>
+				<li><button id="btn*" onclick="valorString('*')"><img src="img/es.png" alt="*"></button></li>
+				<li><button id="btn0" onclick="valorString('0')"><img src="img/0.png" alt="0"></button></li>
+				<li><button id="btn#" onclick="valorString('#')"><img src="img/has.png" alt="#"></button></li>
+			</ul>
+			<ul>
+				<li><button></button></li>
+				<li><button onclick="playAudio()" type="button"><img src="img/ligar.png" alt="ligar"></button></li>
+				<li><button id="btnDel" onclick="valorDel()"><img src="img/del.png" alt="delete"></button></li>
+			</ul>
+	</body>
+</html>
